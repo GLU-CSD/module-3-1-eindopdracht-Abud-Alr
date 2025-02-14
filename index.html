@@ -1,32 +1,69 @@
-<!doctype html>
-<html class="no-js" lang="">
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title></title>
-  <link rel="stylesheet" href="assets/css/style.css">
-  <meta name="description" content="">
-
-  <meta property="og:title" content="">
-  <meta property="og:type" content="">
-  <meta property="og:url" content="">
-  <meta property="og:image" content="">
-  <meta property="og:image:alt" content="">
-
-  <link rel="icon" href="/favicon.ico" sizes="any">
-  <link rel="icon" href="/icon.svg" type="image/svg+xml">
-  <link rel="apple-touch-icon" href="icon.png">
-
-  <meta name="theme-color" content="#fafafa">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skateboard Shop</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="https://kit.fontawesome.com/your-fontawesome-kit.js" crossorigin="anonymous"></script>
 </head>
-
 <body>
-
-  <!-- Add your site or application content here -->
-  <p>Hello world! This is HTML5 Boilerplate.</p>
-  <script src="assets/js/app.js"></script>
-
+    <header>
+        <div class="logo">Skateboard Shop</div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#products">Shop</a></li>
+                <li><a href="#cart">Cart (<span id="cart-count">0</span>)</a></li>
+                <li><a href="#login">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section id="hero">
+        <div class="hero-content">
+            <h2>Welcome to the Ultimate Skateboard Store</h2>
+            <p>Find the best boards, wheels, and accessories</p>
+            <button class="shop-btn" onclick="window.location.href='#products'">Shop Now</button>
+        </div>
+    </section>
+    
+    <section id="products" class="product-grid">
+        <h2>Our Products</h2>
+        <div id="product-list">
+            <div class="product">
+                <img src="assets/img/abeeldign.jpg" alt="Skateboard 1">
+                <h3>Classic Skateboard</h3>
+                <p>$59.99</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="assets/img/abeeldign.jpg" alt="Skateboard 2">
+                <h3>Pro Skateboard</h3>
+                <p>$89.99</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="assets/img/abeeldign.jpg" alt="Skateboard 3">
+                <h3>Limited Edition</h3>
+                <p>$129.99</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+        </div>
+    </section>
+    
+    <section id="cart">
+        <h2>Your Cart</h2>
+        <div id="cart-items">
+            <p>Cart is empty</p>
+        </div>
+        <button id="checkout">Checkout</button>
+    </section>
+    
+    <footer>
+        <p>&copy; 2025 Skateboard Shop. All Rights Reserved.</p>
+    </footer>
+    
+    <script src="assets/js/app.js"></script>
 </body>
-
 </html>
