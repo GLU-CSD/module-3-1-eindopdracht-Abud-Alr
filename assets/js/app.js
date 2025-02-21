@@ -5,6 +5,23 @@ document.addEventListener("DOMContentLoaded", () => {
     const addToCartButtons = document.querySelectorAll(".add-to-cart");
     const checkoutButton = document.getElementById("checkout");
 
+    const searchInput = document.getElementById("search-input");
+    const searchBtn = document.getElementById("search-btn");
+
+    searchBtn.addEventListener("click", () => {
+        const searchText = searchInput.value.toLowerCase();
+        const products = document.querySelectorAll(".product");
+
+        products.forEach(product => {
+            const productName = product.querySelector("h3").innerText.toLowerCase();
+            if (productName.includes(searchText)) {
+                product.style.display = "block";
+            } else {
+                product.style.display = "none";
+            }
+        });
+    });
+
     function updateCart() {
         cartCount.innerText = cart.length;
         cartItems.innerHTML = "";
