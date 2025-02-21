@@ -22,6 +22,20 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
+    const minPrice = document.getElementById("min-price");
+    const maxPrice = document.getElementById("max-price");
+    const minPriceValue = document.getElementById("min-price-value");
+    const maxPriceValue = document.getElementById("max-price-value");
+    const applyFilterButton = document.querySelector(".apply-filter");
+
+    minPrice.addEventListener("input", () => {
+        minPriceValue.innerText = minPrice.value;
+    });
+
+    maxPrice.addEventListener("input", () => {
+        maxPriceValue.innerText = maxPrice.value;
+    });
+
     function updateCart() {
         cartCount.innerText = cart.length;
         cartItems.innerHTML = "";

@@ -54,6 +54,18 @@
     </div>
   </section>
   
+  <div class="container">
+    <aside class="sidebar">
+      <h2>Filter by Price</h2>
+      <div class="price-range">
+        <label for="min-price">Min Price: $<span id="min-price-value">0</span></label>
+        <input type="range" id="min-price" min="0" max="500" step="5" value="0">
+        <label for="max-price">Max Price: $<span id="max-price-value">500</span></label>
+        <input type="range" id="max-price" min="0" max="500" step="5" value="500">
+      </div>
+      <button class="apply-filter">Apply Filter</button>
+    </aside>
+
   <section id="products" class="product-grid">
     <h2>Our Products</h2>
     <div id="product-list">
