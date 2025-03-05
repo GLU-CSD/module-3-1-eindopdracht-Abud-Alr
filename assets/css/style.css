@@ -289,6 +289,62 @@ footer {
   margin-top: 20px;
 }
 
+/* Bovenste balk */
+.footer-top {
+  text-align: center;
+  background-color: #ff440087;
+  padding: 10px 0;
+}
+
+.footer-top a {
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.footer-top a:hover {
+  text-decoration: underline;
+}
+
+/* Footer content */
+.footer-content {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  padding: 20px 10%;
+  flex-wrap: wrap;
+}
+
+/* Footer kolommen */
+.footer-column {
+  max-width: 250px;
+}
+
+.footer-column h4 {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 8px;
+}
+
+.footer-column ul li a {
+  text-decoration: none;
+  color: #DDD;
+  font-size: 14px;
+}
+
+.footer-column ul li a:hover {
+  text-decoration: underline;
+}
+
 /* Filter styling */
 .content-wrapper {
   display: flex;
