@@ -94,3 +94,80 @@ document.addEventListener("DOMContentLoaded", () => {
 
     updateCart();
 });
+
+const categoryCheckboxes = document.querySelectorAll(".category-checkbox");
+const applyCategoryFilterButton = document.querySelector(".apply-category-filter");
+
+applyCategoryFilterButton.addEventListener("click", () => {
+    const selectedCategories = Array.from(categoryCheckboxes)
+        .filter(checkbox => checkbox.checked)
+        .map(checkbox => checkbox.value.toLowerCase());
+
+    const products = document.querySelectorAll(".product");
+
+    products.forEach(product => {
+        const productName = product.querySelector("h3").innerText.toLowerCase();
+
+        if (selectedCategories.length === 0) {
+            product.style.display = "block";
+        } else {
+            const matchesCategory = selectedCategories.some(category => productName.includes(category));
+            product.style.display = matchesCategory ? "block" : "none";
+        }
+    });
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+    const modal = document.getElementById('order-form-modal');
+    const btn = document.getElementById('checkout');
+    const span = document.getElementsByClassName('close')[0];
+  
+    btn.onclick = function() {
+      modal.style.display = 'block';
+    }
+  
+    span.onclick = function() {
+      modal.style.display = 'none';
+    }
+  
+    window.onclick = function(event) {
+      if (event.target == modal) {
+        modal.style.display = 'none';
+      }
+    }
+  
+    const form = document.getElementById('order-form');
+    form.addEventListener('submit', function(event) {
+      event.preventDefault();
+      if (validateForm()) {
+        alert('Order submitted successfully!');
+        modal.style.display = 'none';
+        form.reset();
+      }
+    });
+  
+    function validateForm() {
+      let valid = true;
+      const inputs = form.querySelectorAll('input[required]');
+      inputs.forEach(input => {
+        if (!input.value.trim()) {
+          valid = false;
+          input.classList.add('error');
+          input.nextElementSibling.textContent = 'This field is required';
+        } else {
+          input.classList.remove('error');
+          input.nextElementSibling.textContent = '';
+        }
+      });
+      return valid;
+    }
+  
+    form.querySelectorAll('input[required]').forEach(input => {
+      input.addEventListener('input', () => {
+        if (input.value.trim()) {
+          input.classList.remove('error');
+          input.nextElementSibling.textContent = '';
+        }
+      });
+    });
+  });

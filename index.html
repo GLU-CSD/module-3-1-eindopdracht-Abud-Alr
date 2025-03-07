@@ -60,23 +60,48 @@
   </section>
   
   <div class="container">
-  <!-- Zijbalk met prijsfilter -->
-    <aside class="sidebar">
-      <h2>Filter by Price</h2>
+  <!-- Zijbalk met filters -->
+  <aside class="sidebar">
+    <div class="filter-container">
+      <!-- Prijsfilter -->
       <div class="price-range">
+        <h2>Filter by Price</h2>
         <label for="min-price">Min Price: $<span id="min-price-value">0</span></label>
         <input type="range" id="min-price" min="0" max="500" step="5" value="0">
         <label for="max-price">Max Price: $<span id="max-price-value">500</span></label>
         <input type="range" id="max-price" min="0" max="500" step="5" value="500">
+        <button class="apply-filter">Apply Filter</button>
       </div>
-      <button class="apply-filter">Apply Filter</button>
-    </aside>
 
-    <!-- Productoverzicht -->
+      <!-- Categorie filter -->
+      <div class="category-filters">
+        <h2>Filter by Category</h2>
+        <div class="category-option">
+          <input type="checkbox" id="skateboards" class="category-checkbox" value="Skateboard">
+          <label for="skateboards">Skateboards</label>
+        </div>
+        <div class="category-option">
+          <input type="checkbox" id="wheels" class="category-checkbox" value="Wheels">
+          <label for="wheels">Wheels</label>
+        </div>
+        <div class="category-option">
+          <input type="checkbox" id="decks" class="category-checkbox" value="Deck">
+          <label for="decks">Decks</label>
+        </div>
+        <div class="category-option">
+          <input type="checkbox" id="griptape" class="category-checkbox" value="Grip Tape">
+          <label for="griptape">Grip Tape</label>
+        </div>
+        <button class="apply-category-filter">Apply Filter</button>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Productoverzicht -->
   <section id="products" class="product-grid">
     <h2>Our Products</h2>
     <div id="product-list">
-     <!-- Producten -->
+      <!-- Producten -->
       <div class="product">
         <img src="assets/img/afbeelding1.jpg" alt="Skateboard 1" />
         <h3>Classic Skateboard</h3>
@@ -199,6 +224,7 @@
       </div>
     </div>
   </section>
+</div>
   
   <!-- Winkelwagen -->
   <section id="cart">
@@ -263,7 +289,53 @@
       </div>
     </div>
   </footer>
-  
+
+<!-- Order Form Modal -->
+<div id="order-form-modal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h2>Order Form</h2>
+    <form id="order-form">
+      <div class="form-group">
+        <label for="first-name">First Name</label>
+        <input type="text" id="first-name" name="first-name" required>
+        <span></span>
+      </div>
+      <div class="form-group">
+        <label for="last-name">Last Name</label>
+        <input type="text" id="last-name" name="last-name" required>
+        <span></span>
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
+        <span></span>
+      </div>
+      <div class="form-group">
+        <label for="phone">Phone</label>
+        <input type="tel" id="phone" name="phone" required>
+        <span></span>
+      </div>
+      <div class="form-group">
+        <label for="address">Address</label>
+        <input type="text" id="address" name="address" required>
+        <span></span>
+      </div>
+      <div class="form-group">
+        <label for="city">City</label>
+        <input type="text" id="city" name="city" required>
+        <span></span>
+      </div>
+      <div class="form-group">
+        <label for="zip">ZIP Code</label>
+        <input type="text" id="zip" name="zip" required>
+        <span></span>
+      </div>
+      <button type="submit" class="submit-btn">Submit Order</button>
+    </form>
+  </div>
+</div>
+
   <script src="assets/js/app.js"></script>
 </body>
 </html>
