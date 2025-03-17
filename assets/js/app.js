@@ -148,9 +148,9 @@ document.addEventListener('DOMContentLoaded', () => {
   
     function validateForm() {
       let valid = true;
-      const inputs = form.querySelectorAll('input[required]');
+      const inputs = form.querySelectorAll('input[required], select[required]');
       inputs.forEach(input => {
-        if (!input.value.trim()) {
+        if (!input.value.trim() || (input.type === 'checkbox' && !input.checked)) {
           valid = false;
           input.classList.add('error');
           input.nextElementSibling.textContent = 'This field is required';
@@ -162,12 +162,36 @@ document.addEventListener('DOMContentLoaded', () => {
       return valid;
     }
   
-    form.querySelectorAll('input[required]').forEach(input => {
+    form.querySelectorAll('input[required], select[required]').forEach(input => {
       input.addEventListener('input', () => {
-        if (input.value.trim()) {
+        if (input.value.trim() || (input.type === 'checkbox' && input.checked)) {
           input.classList.remove('error');
           input.nextElementSibling.textContent = '';
         }
       });
     });
   });
+
+// Smooth scrolling function
+function scrollToSection(target) {
+  const element = document.querySelector(target);
+  if (element) {
+    window.scrollTo({
+      top: element.offsetTop,
+      behavior: 'smooth'
+    });
+  }
+}
+
+// Event listeners for buttons and links
+document.addEventListener('DOMContentLoaded', () => {
+  const scrollLinks = document.querySelectorAll('a[href^="#"], button[data-scroll-to]');
+
+  scrollLinks.forEach(link => {
+    link.addEventListener('click', (event) => {
+      event.preventDefault();
+      const targetId = link.getAttribute('href') || link.getAttribute('data-scroll-to');
+      scrollToSection(targetId);
+    });
+  });
+});

@@ -536,11 +536,16 @@ footer {
   margin-bottom: 5px;
 }
 
-.form-group input {
+.form-group input,
+.form-group select {
   width: 96%;
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
+}
+
+.form-group input[type="checkbox"] {
+  width: auto;
 }
 
 .submit-btn {
@@ -623,5 +628,9 @@ footer {
   .category-filters {
     margin-right: 0;
     margin-left: 0;
+  }
+
+  .modal-content {
+    width: 90%;
   }
 }
