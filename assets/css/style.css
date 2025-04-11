@@ -284,6 +284,25 @@ nav a:hover {
   transform: scale(1.1);
 }
 
+/* Checkout button styling */
+.checkout-btn {
+  display: inline-block;
+  background: #ff4500;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  transition: background 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.checkout-btn:hover {
+  background: #e03e00;
+  transform: scale(1.1);
+}
+
 /* Footer styling */
 footer {
   text-align: center;
@@ -570,6 +589,63 @@ footer {
 .error + span {
   color: red;
   font-size: 0.9em;
+}
+
+/* Order form section */
+#order-form-section {
+  padding: 20px;
+  background-color: #f9f9f9;
+}
+
+#order-form-section .container {
+  max-width: 800px;
+  margin: 0 auto;
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#order-form-section h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#order-form .form-group {
+  margin-bottom: 15px;
+}
+
+#order-form .form-group label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+#order-form .form-group input,
+#order-form .form-group select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+#order-form .form-group input[type="checkbox"] {
+  width: auto;
+}
+
+.submit-btn {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background: #ff4500;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+.submit-btn:hover {
+  background: #e03e00;
 }
 
 /* Responsive adjustments */

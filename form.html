@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Order Form</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <!-- Header -->
+  <header id="top">
+    <div class="header-top">
+      <!-- Logo -->
+      <div class="logo">
+        <img src="assets/img/skatboardicon.png" alt="Skateboard Icon">
+      </div>
+
+      <!-- Search Bar -->
+      <div class="search-bar">
+        <input type="text" id="search-input" placeholder="Search products...">
+        <button id="search-btn"><i class="fa fa-search"></i></button>
+      </div>
+
+      <!-- Language Selector -->
+      <div class="language-selector">
+        <button class="language-button">
+          <img src="assets/img/language.png" alt="Language" class="flag">
+          <i class="fa fa-chevron-down"></i>
+        </button>
+        <ul class="language-options">
+          <li>English</li>
+          <li>Español</li>
+          <li>Français</li>
+          <li>Deutsch</li>
+          <li>Italiano</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav>
+      <ul>
+        <li><a href="index.html#home">Home</a></li>
+        <li><a href="index.html#products">Shop</a></li>
+        <li><a href="index.html#cart">Cart (<span id="cart-count">0</span>)</a></li>
+        <li><a href="index.html#login">Login</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Order Form Section -->
+  <section id="order-form-section">
+    <div class="container">
+      <h2>Order Form</h2>
+      <form id="order-form">
+        <div class="form-group">
+          <label for="salutation">Salutation</label>
+          <select id="salutation" name="salutation" required>
+            <option value="">Select...</option>
+            <option value="mr">Mr.</option>
+            <option value="mrs">Mrs.</option>
+            <option value="other">Other</option>
+          </select>
+          <span></span>
+        </div>
+        <div class="form-group">
+          <label for="first-name">First Name</label>
+          <input type="text" id="first-name" name="first-name" required>
+          <span></span>
+        </div>
+        <div class="form-group">
+          <label for="middle-name">Middle Name</label>
+          <input type="text" id="middle-name" name="middle-name">
+          <span></span>
+        </div>
+        <div class="form-group">
+          <label for="last-name">Last Name</label>
+          <input type="text" id="last-name" name="last-name" required>
+          <span></span>
+        </div>
+        <div class="form-group">
+          <label for="street-name">Street Name</label>
+          <input type="text" id="street-name" name="street-name" required>
+          <span></span>
+        </div>
+        <div class="form-group">
+          <label for="house-number">House Number</label>
+          <input type="number" id="house-number" name="house-number" required>
+          <span></span>
+        </div>
+        <div class="form-group">
+          <label for="postal-code">Postal Code</label>
+          <input type="text" id="postal-code" name="postal-code" required>
+          <span></span>
+        </div>
+        <div class="form-group">
+          <label for="country">Country</label>
+          <input type="text" id="country" name="country" required>
+          <span></span>
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required>
+          <span></span>
+        </div>
+        <div class="form-group">
+          <label for="phone">Phone</label>
+          <input type="tel" id="phone" name="phone" required>
+          <span></span>
+        </div>
+        <div class="form-group">
+          <label for="dob">Date of Birth</label>
+          <input type="date" id="dob" name="dob">
+          <span></span>
+        </div>
+        <div class="form-group">
+          <label>
+            <input type="checkbox" id="terms" name="terms" required>
+            I agree to the general terms and conditions
+          </label>
+          <span></span>
+        </div>
+        <button type="submit" class="submit-btn">Submit Order</button>
+      </form>
+    </div>
+  </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Skateboard Shop. All Rights Reserved.</p>
+        <div class="footer-top">
+          <a href="#top" class="back-to-top">Back to Top</a>
+        </div>
+        <div class="footer-content">
+          <div class="footer-column">
+            <h4>Get to Know Us</h4>
+            <ul>
+              <li><a href="#">Careers</a></li>
+              <li><a href="#">Blog</a></li>
+              <li><a href="#">About Skateboards</a></li>
+              <li><a href="#">Investor Relations</a></li>
+              <li><a href="#">Skateboard Devices</a></li>
+              <li><a href="#">Skateboard Science</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h4>Make Money with Us</h4>
+            <ul>
+              <li><a href="#">Sell Skateboard Products</a></li>
+              <li><a href="#">Sell on Skateboard Business</a></li>
+              <li><a href="#">Sell apps on Skateboard Shop</a></li>
+              <li><a href="#">Become an Affiliate</a></li>
+              <li><a href="#">Advertise Your Products</a></li>
+              <li><a href="#">Self-Publish with Us</a></li>
+              <li><a href="#">Host an Skateboard Hub</a></li>
+              <li><a href="#">› See More Make Money with Us</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h4>Skateboard Payment Products</h4>
+            <ul>
+              <li><a href="#">Skateboard Business Card</a></li>
+              <li><a href="#">Shop with Points</a></li>
+              <li><a href="#">Reload Your Balance</a></li>
+              <li><a href="#">Skateboard Currency Converter</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h4>Let Us Help You</h4>
+            <ul>
+              <li><a href="#">Skateboard and COVID-19</a></li>
+              <li><a href="#">Your Account</a></li>
+              <li><a href="#">Your Orders</a></li>
+              <li><a href="#">Shipping Rates & Policies</a></li>
+              <li><a href="#">Returns & Replacements</a></li>
+              <li><a href="#">Manage Your Content and Devices</a></li>
+              <li><a href="#">Help</a></li>
+            </ul>
+          </div>
+        </div>
+      </footer>
+
+  <script src="assets/js/app.js"></script>
+</body>
+</html>
